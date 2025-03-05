@@ -179,7 +179,6 @@ void BattleManager::SpawnEnemies(EnemyName enemy, int count)
             }
         }
     }*/
-
 }
 
 void BattleManager::DeleteisDeadEnemy()

@@ -47,8 +47,8 @@ void StageManager::SpawnEnemy()
 	int enemyCount = GetStageData().enemyCount;
 	if (m_myCurrentStage == 0) //ステージ１
 	{
-		int enemyone = 5;
-		int enemytwo = 10;
+		int enemyone = 15;
+		int enemytwo = 5;
 
 			bm.SpawnEnemies(EnemyName::ShiroMaru_, enemyone);
 

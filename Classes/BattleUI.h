@@ -6,9 +6,6 @@
 
 #include "..\Base\pch.h"
 #include "..\Base\dxtk.h"
-
-#pragma once
-
 #include "StageManager.h"
 #include "SpriteManager.h"
 #include "Collider.h"
@@ -32,7 +29,7 @@ public:
 	BattleUI(const BattleUI&) = delete;
 	BattleUI& operator=(const BattleUI&) = delete;
 
-	void Initialize(wstring content,SimpleMath::Vector2 Position);
+	void Initialize(wstring content, SimpleMath::Vector2 Position);
 	void Render();
 private:
 	CreateUI m_nowStage;
@@ -45,8 +42,3 @@ private:
 	CreateUI m_enemyes;
 	SimpleMath::Vector2 m_enemyUIPos = SimpleMath::Vector2(500, 10);
 };
-
-//	if (m_testButtom.IsBottunClicked())
-//{
-//	èàóùì‡óe
-//}

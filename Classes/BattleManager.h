@@ -16,9 +16,6 @@
 #include "UIFactory.h"
 #include "EnemyBase.h"
 #include "EnemyFactory.h"
-#include "Tri_Orange.h"
-#include "ShiroMaru.h"
-#include "MiyabiMaru.h"
 
 using namespace DirectX;
 
