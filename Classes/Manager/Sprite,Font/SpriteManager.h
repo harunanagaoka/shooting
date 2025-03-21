@@ -15,7 +15,7 @@ using namespace std;
 
 enum  SpriteName {//画像呼び出し用のenum
 #define ITEM(name,adress)name,
-#include "defineFile/SpriteInfo.def"
+#include "..\..\defineFile\SpriteInfo.def"
 #undef ITEM
 };
 
@@ -29,7 +29,7 @@ private:
 	
 	std::vector<string> m_spritePath = {//SpriteInfo.defから画像のファイルパス取得
 	#define ITEM(name,adress)adress,
-	#include "defineFile/SpriteInfo.def"
+	#include "..\..\defineFile\SpriteInfo.def"
 	#undef ITEM
 	};
 

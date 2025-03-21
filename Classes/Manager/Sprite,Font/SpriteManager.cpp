@@ -32,7 +32,7 @@ void SpriteManager::CreatSpriteInfo(ResourceUploadBatch& resourceUpload,
 }
 
 //enumを引数に設定すると、該当のスプライトデータを返します。
-struct SpriteData SpriteManager::GetSprite(int SpriteNum)
+struct SpriteData SpriteManager::GetSprite(int SpriteNum)//SpriteNameで受け取る
 {
 	return spriteArray[SpriteNum];
 }

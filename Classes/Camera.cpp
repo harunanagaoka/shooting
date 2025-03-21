@@ -55,4 +55,21 @@ void Camera::Move()
 			m_position.y = m_stageLimit_Down;
 		}
 	}
+
+	if (InputSystem.Gamepad.Count() == 0)
+	{
+		return;
+	}
+	else
+	{
+		SimpleMath::Vector2 direction;
+		direction = InputSystem.Gamepad.ElementAtOrDefault(0).LeftStickVector2D();
+		if (abs(direction.x) < 0.01 && abs(direction.y) < 0.01)
+		{
+			return;
+		}
+
+		m_position += direction * m_velocity;
+	}
 }
+

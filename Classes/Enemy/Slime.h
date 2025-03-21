@@ -4,13 +4,13 @@
 
 #pragma once
 
-#include "..\Base\pch.h"
-#include "..\Base\dxtk.h"
+#include "..\..\Base\pch.h"
+#include "..\..\Base\dxtk.h"
 #include "EnemyBase.h"
-#include "Timer.h"
-#include "Camera.h"
+#include "..\Timer.h"
+#include "..\Camera.h"
 
-#include "PlayerManager.h"
+#include "..\Manager\PlayerManager.h"
 
 using namespace DirectX;
 

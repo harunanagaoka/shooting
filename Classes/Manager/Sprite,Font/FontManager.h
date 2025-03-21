@@ -18,7 +18,7 @@ using namespace std;
 
 enum  FontName {
 #define ITEM(name,adress)name,
-#include "defineFile/FontInfo.def"
+#include "..\..\defineFile\FontInfo.def"
 #undef ITEM
 };
 
@@ -53,7 +53,7 @@ public:
 protected:
 	std::vector<string> m_spritePath = {
 	#define ITEM(name,adress)adress,
-	#include "defineFile/FontInfo.def"
+	#include "..\..\defineFile\FontInfo.def"
 	#undef ITEM
 	};
 };

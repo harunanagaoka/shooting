@@ -16,6 +16,9 @@
 #include "UIFactory.h"
 #include "EnemyBase.h"
 #include "EnemyFactory.h"
+#include "Tri_Orange.h"
+#include "ShiroMaru.h"
+#include "MiyabiMaru.h"
 
 using namespace DirectX;
 
@@ -37,7 +40,7 @@ public:
 	void Update();
 	void Render(DirectX::SpriteBatch* sprite_batch);
 	void SpawnEnemy( int count) ;
-	void OccurrenceATK();
+	void OccurrenceATK(SimpleMath::Vector2 direction);
 	void CheckHit(PlayerAttack* atk);
 	void DeleteFinishAtk();
 	void DeleteAllATK();

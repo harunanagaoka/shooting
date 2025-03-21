@@ -7,9 +7,9 @@
 #include "..\Base\pch.h"
 #include "..\Base\dxtk.h"
 #include <vector>
-#include "EnemyBase.h"
+#include "..\Enemy\EnemyBase.h"
 #include "BattleManager.h"
-#include "PlayFlowController.h"
+#include "..\StateController\PlayFlowController.h"
 
 using namespace DirectX;
 

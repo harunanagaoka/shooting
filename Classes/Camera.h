@@ -36,10 +36,10 @@ public:
 
 private:
 	float m_velocity = 5.0;
-	float m_stageLimit_Left = -2000;
-	float m_stageLimit_Right = 700;
-	float m_stageLimit_Up = -2040;
-	float m_stageLimit_Down = 1000;
+	float m_stageLimit_Left = -2640;
+	float m_stageLimit_Right = 1360;
+	float m_stageLimit_Up = -2360;
+	float m_stageLimit_Down = 1640;
 
 	SimpleMath::Vector2 m_renderPos;
 	PlayerParameter::Params& m_playerParams = PlayerParameter::GetInstance().GetParams();

@@ -4,10 +4,10 @@
 
 #pragma once
 
-#include "..\Base\pch.h"
-#include "..\Base\dxtk.h"
+#include "..\..\Base\pch.h"
+#include "..\..\Base\dxtk.h"
 #include<vector>
-#include "SpriteManager.h"
+#include "Sprite,Font/SpriteManager.h
 #include "PlayerManager.h"
 #include "BattleManager.h"
 #include "StageManager.h"

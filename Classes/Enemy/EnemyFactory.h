@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include "..\Base\pch.h"
-#include "..\Base\dxtk.h"
+#include "..\..\Base\pch.h"
+#include "..\..\Base\dxtk.h"
 #include<vector>
 #include "EnemyBase.h"
 #include "Tri_Orange.h"

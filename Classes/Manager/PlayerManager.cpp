@@ -50,6 +50,9 @@ void PlayerManager::move()
 	}
 }
 
+
+
+
 void PlayerManager::Render(DirectX::SpriteBatch* sprite_batch)
 {
 	///デバッグ用

@@ -6,14 +6,14 @@
 
 #include "..\Base\pch.h"
 #include "..\Base\dxtk.h"
-#include "GameStateController.h"
-#include "PlayStateController.h"
-#include "SpriteManager.h"
+#include "..\StateController\GameStateController.h"
+#include "..\StateController\PlayFlowController.h"
+#include "Sprite,Font/SpriteManager.h"
 #include "StageManager.h"
 #include "BattleManager.h"
 #include "PlayerManager.h"
-#include "Camera.h"
-#include "Collider.h"
+#include "..\Camera.h"
+#include "..\Collider.h"
 
 using namespace DirectX;
 

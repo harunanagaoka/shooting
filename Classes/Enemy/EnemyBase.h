@@ -4,10 +4,10 @@
 
 #pragma once
 
-#include "..\Base\pch.h"
-#include "..\Base\dxtk.h"
-#include "SpriteManager.h"
-#include "Collider.h"
+#include "..\..\Base\pch.h"
+#include "..\..\Base\dxtk.h"
+#include "..\Manager\Sprite,Font\SpriteManager.h"
+#include "..\Collider.h"
 
 using namespace DirectX;
 

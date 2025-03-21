@@ -17,7 +17,8 @@ void Tri_Orange::Initialize()
 	m_spriteOffset_x = -64;
 	m_spriteOffset_y = -64;
 	m_rotate = 1;
-	m_moveTimer_Right.Set(m_toLeftTime);
+	m_MoveTime = MakeRandomNum(m_toRightTime_Min, m_toRightTime_Max);
+	//m_moveTimer_Right.Set(MakeRandomNum(m_toRightTime_Min,m_toRightTime_Max));
 
 }
 
@@ -69,13 +70,13 @@ void Tri_Orange::HandleTri_OrangeState(Tri_OrangeState State)
 	case Tri_OrangeState::Stay_Right:
 
 		UpdateMoveDirection();
-		m_moveTimer_Right.Set(m_toRightTime);
+		m_moveTimer_Right.Set(m_MoveTime);
 		m_state = Tri_OrangeState::Move;
 		break;
 
 	case Tri_OrangeState::Stay_Left:
 		UpdateMoveDirection();
-		m_moveTimer_Right.Set(m_toLeftTime);
+		m_moveTimer_Right.Set(m_MoveTime);
 		m_state = Tri_OrangeState::Move;
 		break;
 
@@ -83,6 +84,21 @@ void Tri_Orange::HandleTri_OrangeState(Tri_OrangeState State)
 		break;
 	}
 	
+}
+
+std::mt19937& Tri_Orange::GetRandEngine()
+{
+	static std::random_device rd;
+	static std::mt19937 gen(rd()); //staticで1回目のみ初期化される
+	return gen;
+}
+//ステイをランダムな時間にする。
+float Tri_Orange::MakeRandomNum(float min, float max)
+{
+	std::uniform_real_distribution<float> distr(min, max);
+	float num = distr(GetRandEngine());
+
+	return num;
 }
 
 void Tri_Orange::Move()
@@ -106,11 +122,6 @@ void Tri_Orange::UpdateMoveDirection()
 	{
 		m_shakeDirection = SimpleMath::Vector2(m_moveDirection.x, -m_moveDirection.y);
 	}
-}
-
-void Tri_Orange::Attack() 
-{
-
 }
 
 void Tri_Orange::Render()

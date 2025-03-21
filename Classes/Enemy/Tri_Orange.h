@@ -4,15 +4,18 @@
 
 #pragma once
 
-#include "..\Base\pch.h"
-#include "..\Base\dxtk.h"
-#include "EnemyBase.h"
-#include "Timer.h"
-#include "Camera.h"
+#include <random>
+#include <iostream>
 
-#include "PlayerManager.h"
-#include "PlayerParameter.h"
-#include "SpriteManager.h"
+#include "..\..\Base\pch.h"
+#include "..\..\Base\dxtk.h"
+#include "EnemyBase.h"
+#include "..\Timer.h"
+#include "..\Camera.h"
+
+#include "..\Manager\PlayerManager.h"
+#include "..\Player\PlayerParameter.h"
+#include "..\Manager\Sprite,Font\SpriteManager.h"
 
 using namespace DirectX;
 
@@ -36,6 +39,8 @@ public:
 	void Render() override;
 	Collider::ColliderRect GetCollider() const override;
 	void AffectDamage(int offence) override;
+	std::mt19937& GetRandEngine();
+	float MakeRandomNum(float min, float max);
 
 private:
 	Tri_OrangeState m_state = Tri_OrangeState::Stay_Right;
@@ -48,10 +53,15 @@ private:
 
 	float m_rotate;
 	float m_shakeVelocity = 200;
-	float m_toRightTime = 1;
-	float m_toLeftTime = 1;
+	float m_MoveTime = 0;
+	float m_toRightTime_Max = 2;
+	float m_toRightTime_Min = 0.5;
+	float m_toLeftTime_Max = 2;
+	float m_toLeftTime_Min = 0.5;
+
 	bool m_isleft = false;
 	bool m_isright = true;
+
 
 
 

@@ -6,6 +6,7 @@
 
 using namespace SimpleMath;
 
+
 void BattleUI::Initialize(wstring content, SimpleMath::Vector2 Position)
 {
 

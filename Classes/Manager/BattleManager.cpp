@@ -21,7 +21,18 @@ void BattleManager::Update()
 
     if (InputSystem.Mouse.was.leftButton == InputSystem.Mouse.was.PRESSED)
     {
-        OccurrenceATK();
+        OccurrenceATK(InputSystem.Mouse.position);
+    }
+
+    SimpleMath::Vector2 direction = InputSystem.Gamepad.ElementAtOrDefault(0).RigthStickVector2D();
+
+    if (InputSystem.Gamepad.Count() > 0 && InputSystem.Gamepad.ElementAtOrDefault(0).wasPressedThisFrame.Button6)
+    {
+        direction.y *= -1;
+        direction += SimpleMath::Vector2(DXTK->SwapChain.Viewport.Width / 2,
+                                         DXTK->SwapChain.Viewport.Height / 2);
+       
+        OccurrenceATK(direction);
     }
 
     UpdateEnemy();
@@ -37,9 +48,9 @@ void BattleManager::Update()
     }
 }
 
-void BattleManager::OccurrenceATK()
+void BattleManager::OccurrenceATK(SimpleMath::Vector2 direction)
 {
-     PlayerAttack* atk = new PlayerAttack(InputSystem.Mouse.position);
+     PlayerAttack* atk = new PlayerAttack(direction);
      atk->Initialize();
      m_attack.push_back(atk);
 }
@@ -179,6 +190,7 @@ void BattleManager::SpawnEnemies(EnemyName enemy, int count)
             }
         }
     }*/
+
 }
 
 void BattleManager::DeleteisDeadEnemy()

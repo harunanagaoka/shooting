@@ -31,7 +31,7 @@ void StageManager::MakeStageData()
 	m_allStage = 2;
 
 	StageData Stage_one;
-	Stage_one.enemyCount = 15;
+	Stage_one.enemyCount = 10000;
 	m_stageData.push_back(Stage_one);
 
 	StageData Stage_two;
@@ -47,12 +47,12 @@ void StageManager::SpawnEnemy()
 	int enemyCount = GetStageData().enemyCount;
 	if (m_myCurrentStage == 0) //ステージ１
 	{
-		int enemyone = 15;
-		int enemytwo = 5;
+		int enemyone = 10000;
+		int enemytwo = 0;
 
-			bm.SpawnEnemies(EnemyName::ShiroMaru_, enemyone);
+			bm.SpawnEnemies(EnemyName::TriOrange_, enemyone);
 
-			bm.SpawnEnemies(EnemyName::MiyabiMaru_, enemytwo);
+			//bm.SpawnEnemies(EnemyName::MiyabiMaru_, enemytwo);
 
 		state.ChangeState(PlayState::Battle);
 	}
